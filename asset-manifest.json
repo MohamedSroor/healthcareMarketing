@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/healthcareMarketing/static/css/main.01e070f9.css",
+    "main.js": "/healthcareMarketing/static/js/main.ba563a6d.js",
+    "static/media/Rectangle 33 (5).svg": "/healthcareMarketing/static/media/Rectangle 33 (5).61407804db8ff0193ad1a83b5191858b.svg",
+    "static/media/Rectangle 33.svg": "/healthcareMarketing/static/media/Rectangle 33.097f5a4a2b67ec31ca4651fe3605f53a.svg",
+    "static/media/Rectangle 33 (2).svg": "/healthcareMarketing/static/media/Rectangle 33 (2).10fe468580fb2de8ef83018479b4bec2.svg",
+    "static/media/Rectangle 22 (1).svg": "/healthcareMarketing/static/media/Rectangle 22 (1).2cfea84a3ee5554188ed457929a92aee.svg",
+    "static/media/Rectangle 22 (2).svg": "/healthcareMarketing/static/media/Rectangle 22 (2).9cfccf6f00b2f06d4672d97277894fad.svg",
+    "static/media/Rectangle 33 (1).svg": "/healthcareMarketing/static/media/Rectangle 33 (1).0b21accc9b0f81d1ab24935c0e19b595.svg",
+    "static/media/Rectangle 22.svg": "/healthcareMarketing/static/media/Rectangle 22.9fa1d29f45c1888e0faf36eb9cbd5fb1.svg",
+    "static/media/Frame 70.svg": "/healthcareMarketing/static/media/Frame 70.2b6d874aa3c77c7977e700f6da56219e.svg",
+    "static/media/Frame 69.svg": "/healthcareMarketing/static/media/Frame 69.1496d5f6fa19199520b5812babb44951.svg",
+    "static/media/Frame 38.svg": "/healthcareMarketing/static/media/Frame 38.5d87f42c6a9b13edabb9a38beaba4ffb.svg",
+    "static/media/Frame 60.svg": "/healthcareMarketing/static/media/Frame 60.31dda9b13708944e442a5f6709a69f91.svg",
+    "static/media/Frame 41.svg": "/healthcareMarketing/static/media/Frame 41.b6654a65e2938f12f505b7b059b4fa9c.svg",
+    "static/media/Frame 42.svg": "/healthcareMarketing/static/media/Frame 42.0a6c46db5be79f0c4060a52c279b7079.svg",
+    "static/media/pfizer 1.svg": "/healthcareMarketing/static/media/pfizer 1.eeaacb340b56695929f54a29955a405c.svg",
+    "static/media/Vector.svg": "/healthcareMarketing/static/media/Vector.3cc119ec02b4c4382327c74226b73f33.svg",
+    "static/media/Group 1.svg": "/healthcareMarketing/static/media/Group 1.869999f17f3f000ccf1da5b01ee63c8e.svg",
+    "static/media/Frame 76.svg": "/healthcareMarketing/static/media/Frame 76.9427ec557bf39d606310bcbbd94bda4c.svg",
+    "static/media/Frame 74.svg": "/healthcareMarketing/static/media/Frame 74.e89e6e8c3f35df3a45889f182d2c0dce.svg",
+    "static/media/slick.svg": "/healthcareMarketing/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/healthcareMarketing/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/healthcareMarketing/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/healthcareMarketing/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/healthcareMarketing/index.html",
+    "static/media/Vector (1).svg": "/healthcareMarketing/static/media/Vector (1).6c2620f26e2a1f10f9b5a8a6ad2ffc6b.svg",
+    "main.01e070f9.css.map": "/healthcareMarketing/static/css/main.01e070f9.css.map",
+    "main.ba563a6d.js.map": "/healthcareMarketing/static/js/main.ba563a6d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01e070f9.css",
+    "static/js/main.ba563a6d.js"
+  ]
+}
