@@ -1,0 +1,19 @@
+/* slider.css */
+.companies-container {
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.companies-container h1{
+  margin-bottom: 70px;
+}
+
+.logos .slick-slide {
+  padding: 10px;
+}
+
+.logo-slide img {
+  max-width: 100%;
+  height: auto;
+}
