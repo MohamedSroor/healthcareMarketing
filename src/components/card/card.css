@@ -4,6 +4,12 @@
     height: auto;
     width: auto;
   }
+  .title {
+    padding: 0 20px;
+  }
+  .description {
+    padding: 0 20px;
+  }
   .card .arrow {
     flex-direction: column;
   }
