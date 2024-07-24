@@ -30,10 +30,10 @@ function Header() {
       </div>
       <div className="middle-header">
         <ul>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Clients</li>
-            <li>Join Us</li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#join-us">Join Us</a></li>
         </ul>
       </div>
       <div className="end-header">

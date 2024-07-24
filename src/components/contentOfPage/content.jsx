@@ -151,7 +151,7 @@ function Content() {
         <div className="background1"></div>
       </div>
       <div className="row">
-        <div className="custom-row">
+        <div id="about-us" className="custom-row">
           <div className="custom-col">
             <img src={who} alt="Who we are?" />
           </div>
@@ -211,7 +211,7 @@ function Content() {
         </div>
       </div>
       <div className="container">
-        <h1>Innovative solutions tailored for you</h1>
+        <h1 id="services">Innovative solutions tailored for you</h1>
         <div className="cards-container">
           <div>
             <ul>
@@ -301,10 +301,10 @@ function Content() {
           </Modal>
         </div>
       </div>
-      <div className="companies">
+      <div  id="clients" className="companies">
         <LogoSlider />
       </div>
-      <div className="end-content">
+      <div  id="join-us" className="end-content">
         <div className="background2"></div>
         <h2>
           Join us in our mission to innovate and create outstanding marketing
