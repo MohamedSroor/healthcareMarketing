@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/healthcareMarketing/static/css/main.01e070f9.css",
-    "main.js": "/healthcareMarketing/static/js/main.ba563a6d.js",
+    "main.css": "/healthcareMarketing/static/css/main.c324ea5d.css",
+    "main.js": "/healthcareMarketing/static/js/main.a68f3f80.js",
     "static/media/Rectangle 33 (5).svg": "/healthcareMarketing/static/media/Rectangle 33 (5).61407804db8ff0193ad1a83b5191858b.svg",
     "static/media/Rectangle 33.svg": "/healthcareMarketing/static/media/Rectangle 33.097f5a4a2b67ec31ca4651fe3605f53a.svg",
     "static/media/Rectangle 33 (2).svg": "/healthcareMarketing/static/media/Rectangle 33 (2).10fe468580fb2de8ef83018479b4bec2.svg",
@@ -26,11 +26,11 @@
     "static/media/slick.woff": "/healthcareMarketing/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/healthcareMarketing/index.html",
     "static/media/Vector (1).svg": "/healthcareMarketing/static/media/Vector (1).6c2620f26e2a1f10f9b5a8a6ad2ffc6b.svg",
-    "main.01e070f9.css.map": "/healthcareMarketing/static/css/main.01e070f9.css.map",
-    "main.ba563a6d.js.map": "/healthcareMarketing/static/js/main.ba563a6d.js.map"
+    "main.c324ea5d.css.map": "/healthcareMarketing/static/css/main.c324ea5d.css.map",
+    "main.a68f3f80.js.map": "/healthcareMarketing/static/js/main.a68f3f80.js.map"
   },
   "entrypoints": [
-    "static/css/main.01e070f9.css",
-    "static/js/main.ba563a6d.js"
+    "static/css/main.c324ea5d.css",
+    "static/js/main.a68f3f80.js"
   ]
 }
