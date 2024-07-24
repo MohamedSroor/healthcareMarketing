@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./content.css";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -22,23 +22,52 @@ import cardImg3 from "../../images/Rectangle 33 (2).svg";
 import cardImg6 from "../../images/Rectangle 33 (5).svg";
 import cardRight from "../../images/Vector (1).svg";
 import { TextField } from "@mui/material";
+import TextArea from "antd/es/input/TextArea";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "none",
-  borderRadius: 5,
-  outline: "none",
-  padding: "20px",
-  boxShadow: 24,
-  p: 4,
-};
+
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  return width;
+}
 
 function Content() {
+  const windowWidth = useWindowWidth();
+  const isSmallScreen = windowWidth < 768;
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: isSmallScreen ? "70%" : 400,
+    bgcolor: "background.paper",
+    border: "none",
+    borderRadius: 5,
+    outline: "none",
+    padding: "20px",
+    boxShadow: 24,
+    p: 4,
+    display: "flex",
+    flexDirection: "column",
+    maxHeight: "80vh",
+    overflowY: "auto"
+  };
+  
+  const textareaStyle = {
+    resize: "none",
+    height: "100px",
+    marginBottom: "20px",
+  };
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleModalOpen = () => setModalOpen(true);
+  const handleModalClose = () => setModalOpen(false);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -129,8 +158,8 @@ function Content() {
         <div className="the-full-content">
           <div className="sentences">
             <h1>
-              We believe we can change the dynamics of{" "}
-              <span>healthcare marketing</span>
+              We are confident that we can revolutionize
+              <span> healthcare marketing</span>
             </h1>
           </div>
           <p>
@@ -158,22 +187,20 @@ function Content() {
           <div className="custom-col">
             <h2>Who we are?</h2>
             <p>
-              A savvy, well-seasoned advertising and marketing consultation
-              house operating across the Middle East, dedicated to innovating
-              strategies, coordinating, and implementing unique campaigns. We
-              aim to enhance patients' healthcare experiences through awareness,
-              educational initiatives, support programs, and personalized
-              medications.
-            </p>
-            <p>
-              We aim to enhance patients' healthcare experiences through
-              awareness, educational initiatives, support programs, and
-              personalized medications.
+              We are an experienced advertising and marketing consulting firm
+              that operates in the Middle East. Our focus is on creating
+              innovative strategies and executing unique campaigns. Our goal is
+              to improve patients' healthcare experiences by increasing
+              awareness, providing educational initiatives, offering support
+              programs, and personalized medications.
             </p>
           </div>
         </div>
 
         <div className="custom-row">
+          <div className="custom-col1">
+            <img src={how} alt="How we do it?" />
+          </div>
           <div className="custom-col">
             <h2>How we do it?</h2>
             <p>
@@ -183,9 +210,6 @@ function Content() {
               team, with diverse visions and backgrounds, works together to
               create magic.
             </p>
-          </div>
-          <div className="custom-col">
-            <img src={how} alt="How we do it?" />
           </div>
         </div>
 
@@ -226,7 +250,7 @@ function Content() {
                     alt={card.title}
                     className={visibleCard === card.id ? "active" : ""}
                   />
-                  {card.title}
+                  <span>{card.title}</span>
                 </li>
               ))}
             </ul>
@@ -249,68 +273,161 @@ function Content() {
         </div>
         <div className="section-card">
           <h1>Ready to take your brand to the next level?</h1>
-          <button onClick={handleOpen}>Contact Us</button>
+          <button onClick={handleModalOpen}>Contact Us</button>
           <Modal
-            open={open}
-            onClose={handleClose}
+            open={modalOpen}
+            onClose={handleModalClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <h2 id="modalTitle">Join Us</h2>
+              <div className="title">
+                <h2 id="modalTitle">Contact Us</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 50 50"
+                  onClick={handleModalClose}
+                >
+                  <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+                </svg>
+              </div>
               <form>
                 <TextField
                   id="outlined-basic"
                   label="Name"
                   variant="outlined"
-                  sx={{ width: '100%', paddingBottom: '20px', borderRadius: '15px'}}
-                  />
+                  sx={{
+                    width: "100%",
+                    paddingBottom: "20px",
+                    borderRadius: "15px",
+                  }}
+                />
                 <TextField
                   id="outlined-basic"
                   label="E-mail"
                   variant="outlined"
-                  sx={{ width: '100%', paddingBottom: '20px'}}
-                  />
+                  sx={{ width: "100%", paddingBottom: "20px" }}
+                />
                 <TextField
                   id="outlined-basic"
                   label="Phone Number"
                   variant="outlined"
-                  sx={{ width: '100%', paddingBottom: '20px'}}
-                  />
+                  sx={{ width: "100%", paddingBottom: "20px" }}
+                />
                 <TextField
                   id="outlined-basic"
-                  label="Applying for position"
+                  label="Your Company"
                   variant="outlined"
-                  sx={{ width: '100%', paddingBottom: '20px'}}
-                  />
+                  sx={{ width: "100%", paddingBottom: "20px" }}
+                />
                 <TextField
                   id="outlined-basic"
                   label="Country"
                   variant="outlined"
-                  sx={{ width: '100%', paddingBottom: '20px'}}
-                  />
+                  sx={{ width: "100%", paddingBottom: "20px" }}
+                />
                 <TextField
                   id="outlined-basic"
                   label="City"
                   variant="outlined"
-                  sx={{ width: '100%', paddingBottom: '20px'}}
-                  />
-                <button onClick={handleClose} id="modalButton">Apply</button>
+                  sx={{ width: "100%", paddingBottom: "20px" }}
+                />
+                <TextArea
+                  id="outlined-basic"
+                  label="Message"
+                  variant="outlined"
+                  style={textareaStyle}
+                />
+                <button onClick={handleModalClose} id="modalButton">
+                  Contact Us
+                </button>
               </form>
             </Box>
           </Modal>
         </div>
       </div>
-      <div  id="clients" className="companies">
+      <div id="clients" className="companies">
         <LogoSlider />
       </div>
-      <div  id="join-us" className="end-content">
+      <div id="join-us" className="end-content">
         <div className="background2"></div>
         <h2>
           Join us in our mission to innovate and create outstanding marketing
           and advertising solutions.
         </h2>
         <button onClick={handleOpen}>Join Us</button>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <div className="title">
+              <h2 id="modalTitle">Join Us</h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="30"
+                height="30"
+                viewBox="0 0 50 50"
+                onClick={handleClose}
+              >
+                <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+              </svg>
+            </div>
+            <form>
+              <TextField
+                id="outlined-basic"
+                label="Name"
+                variant="outlined"
+                sx={{
+                  width: "100%",
+                  paddingBottom: "20px",
+                  borderRadius: "15px",
+                }}
+              />
+              <TextField
+                id="outlined-basic"
+                label="E-mail"
+                variant="outlined"
+                sx={{ width: "100%", paddingBottom: "20px" }}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Phone Number"
+                variant="outlined"
+                sx={{ width: "100%", paddingBottom: "20px" }}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Applying for position"
+                variant="outlined"
+                sx={{ width: "100%", paddingBottom: "20px" }}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Country"
+                variant="outlined"
+                sx={{ width: "100%", paddingBottom: "20px" }}
+              />
+              <TextField
+                id="outlined-basic"
+                label="City"
+                variant="outlined"
+                sx={{ width: "100%", paddingBottom: "20px" }}
+              />
+              <button onClick={handleClose} id="modalButton">
+                Apply
+              </button>
+            </form>
+          </Box>
+        </Modal>
       </div>
       <div className="footer">
         <div className="top-footer">

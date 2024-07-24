@@ -12,7 +12,7 @@ function Card({ title, description, icon, image, right }) {
         <div className="description">
           {description.map((item, index) => (
             <p key={index}>
-              <img src={right} />
+              <img src={right} className="icon"/>
               {item}
             </p>
           ))}
